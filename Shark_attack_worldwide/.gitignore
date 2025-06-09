@@ -1,0 +1,10 @@
+# Datenformate
+*.csv
+*.xls
+
+# Python Cache
+__pycache__/
+
+# API-Keys und Umgebungsvariablen
+.env
+apikey.txt
