@@ -50,8 +50,8 @@ shark_attack_worldwide/
 │   └── gsaf_with_coordinates.csv
 │
 ├── scripts/
-│   ├── process_data.py
-│   ├── geocode_coordinates.py
+│   ├── prepare_data.py
+│   ├── geocode_locations.py
 │   └── map_shark_attacks.py
 │
 ├── .gitignore
@@ -60,7 +60,7 @@ shark_attack_worldwide/
 Hinweise
 Die Geocodierung nutzt einen privaten API-Key (OpenCage). Dieser ist nicht im Repository enthalten und sollte lokal in apikey.txt oder .env gespeichert werden.
 
-Pro Durchlauf werden maximal 2200 API-Anfragen verarbeitet. Wiederholtes Ausführen ergänzt schrittweise weitere Einträge.
+Pro Durchlauf werden maximal 500 API-Anfragen verarbeitet. Wiederholtes Ausführen ergänzt schrittweise weitere Einträge.
 
 Ziel & Ausblick
 Ziel des Projekts war es, mit realen Daten ein visuelles Analysewerkzeug zu bauen. Der Fokus lag auf dem praktischen Einsatz von APIs, Datenvisualisierung und strukturiertem Datenhandling.
