@@ -3,8 +3,8 @@ import time
 import requests
 
 API_KEY = "cc0d691973e641319b1f42b3065905f6"
-input_file = "data/gsaf_clean.csv"
-output_file = "data/gsaf_with_coordinates.csv"
+input_file = "../data/gsaf_clean.csv"
+output_file = "../data/gsaf_with_coordinates.csv"
 MAX_REQUESTS_PER_RUN = 500
 
 # Fortschritt nachverfolgen
