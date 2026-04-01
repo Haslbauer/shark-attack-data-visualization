@@ -35,19 +35,19 @@ shark-attack-data-visualization/
 └── .gitignore
 
 
-## ▶️ How to Run
-1. Clone the repository:
+## How to Run
+# 1. Clone the repository:
 ```bash
 git clone https://github.com/Haslbauer/shark-attack-data-visualization.git
 cd shark-attack-data-visualization
 
-2. Install dependencies:
+# 2. Install dependencies:
 pip install -r requirements.txt
 
-3. Run the data
+# 3. Run the data
 python scripts/prepare_data.py
 python scripts/geocode_locations.py
 python scripts/map_shark_attacks.py
 
-4. Open gereated uotput:
+# 4. Open gereated uotput:
 output/shark_attack_map.html
