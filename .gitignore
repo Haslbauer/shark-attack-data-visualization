@@ -1,6 +1,4 @@
-# Datenformate
-*.csv
-*.xls
+
 
 # Python Cache
 __pycache__/
