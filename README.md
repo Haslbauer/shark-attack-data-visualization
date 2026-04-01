@@ -1,57 +1,50 @@
 # Shark Attack Data Visualization
 
-## Overview
-This project processes real-world data from the Global Shark Attack File (GSAF), cleans it, enriches it with geographic coordinates, and visualizes it on an interactive world map.
+A Python project for cleaning, enriching, and visualizing real-world shark attack data on an interactive map.
 
-The goal is to transform raw, inconsistent data into a meaningful visual representation that highlights global patterns of shark attacks.
-
----
+This project was built to work with a real dataset and turn raw data into a clearer, more useful visual representation. The workflow included data cleaning, geocoding, and map-based visualization, with a focus on structuring the project in a practical and understandable way.
 
 ## Features
-- Data cleaning and preprocessing of real-world datasets
-- Geocoding of locations into coordinates
-- Interactive world map visualization
-- Marker size reflects number of incidents per location
-- Color distinction between fatal and non-fatal attacks
-
----
+- Load and process real-world shark attack data
+- Clean and standardize raw dataset entries
+- Enrich location data through geocoding
+- Generate an interactive map visualization
+- Organize the workflow into separate scripts and folders
 
 ## Tech Stack
 - Python
-- pandas (data processing)
-- folium (map visualization)
-- geopy (geocoding)
-- openpyxl (Excel handling)
+- Pandas
+- Geopy
+- Folium
 
----
+## What I Learned
+- Cleaning and transforming real-world datasets
+- Working with missing and inconsistent data
+- Using geocoding to enrich location-based information
+- Creating interactive map visualizations
+- Structuring a Python project with separate scripts and outputs
+- Managing dependencies with `requirements.txt`
 
-## Project Structure
-shark-attack-data-visualization/
-├── data/           # raw and processed data files
-├── scripts/        # Python scripts for processing and visualization
-├── output/         # generated HTML map
-├── README.md
-├── requirements.txt
-└── .gitignore
-
+## Possible Improvements
+- Improve data cleaning for edge cases
+- Add filters for year, country, or incident type
+- Export additional summary statistics
+- Improve the user interface and presentation
+- Extend the project with a small web frontend
+- 
+## Screenshot of the output on the worldmap
+<img width="1118" height="707" alt="image of the generated output" src="https://github.com/user-attachments/assets/cf3b80ed-8343-45af-bfab-ca89ccd6bd69" />
 
 ## How to Run
-1. Clone the repository:
+
+Make sure Python is installed on your system.
+
 ```bash
 git clone https://github.com/Haslbauer/shark-attack-data-visualization.git
 cd shark-attack-data-visualization
-
-2. Install dependencies:
 pip install -r requirements.txt
-
-3. Run the data
 python scripts/prepare_data.py
 python scripts/geocode_locations.py
 python scripts/map_shark_attacks.py
 
-4. Open gereated uotput:
-output/shark_attack_map.html
 
-
-## Screenshot of the output on the worldmap
-<img width="1118" height="707" alt="image of the generated output" src="https://github.com/user-attachments/assets/cf3b80ed-8343-45af-bfab-ca89ccd6bd69" />
