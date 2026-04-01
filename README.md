@@ -51,3 +51,7 @@ python scripts/map_shark_attacks.py
 
 4. Open gereated uotput:
 output/shark_attack_map.html
+
+
+## Screenshot of the output on the worldmap
+<img width="1118" height="707" alt="image of the generated output" src="https://github.com/user-attachments/assets/cf3b80ed-8343-45af-bfab-ca89ccd6bd69" />
