@@ -1,68 +1,53 @@
-🦈 Shark Attack Data Visualization
+# Shark Attack Data Visualization
 
-Projektbeschreibung
+## Overview
+This project processes real-world data from the Global Shark Attack File (GSAF), cleans it, enriches it with geographic coordinates, and visualizes it on an interactive world map.
 
-Dieses Projekt verarbeitet reale Daten aus der Global Shark Attack File (GSAF), bereinigt sie, reichert sie mit Koordinaten an und stellt sie visuell auf einer Weltkarte dar. Die Vorfälle werden als Marker dargestellt, deren Größe die Anzahl der Angriffe pro Ort widerspiegelt. Farblich wird zwischen tödlichen und nicht-tödlichen Vorfällen unterschieden.
+The goal is to transform raw, inconsistent data into a meaningful visual representation that highlights global patterns of shark attacks.
 
-Verwendete Technologien
+---
 
-Python 3.13
+## Features
+- Data cleaning and preprocessing of real-world datasets
+- Geocoding of locations into coordinates
+- Interactive world map visualization
+- Marker size reflects number of incidents per location
+- Color distinction between fatal and non-fatal attacks
 
-pandas – Datenverarbeitung
+---
 
-csv / sqlite3 – Datei- und Datenbankhandling
+## Tech Stack
+- Python
+- pandas (data processing)
+- folium (map visualization)
+- geopy (geocoding)
+- openpyxl (Excel handling)
 
-folium – Kartenvisualisierung
+---
 
-OpenCage API – Geocodierung von Orten
-
-Jupyter / PyCharm – Entwicklungsumgebung
-
-Datenquelle
-
-GSAF5.xls – öffentlich zugänglich unter: https://www.sharkattackfile.net
-(enthält Vorfälle seit über 100 Jahren)
-
-Ablauf
-
-Datenauswahl & Filterung
-Relevante Spalten extrahieren: Country, Location, Activity, Fatal Y/N, Species, Latitude, Longitude.
-
-Geocodierung (nur wenn notwendig)
-Falls Koordinaten fehlen: Ortsangaben werden via OpenCage-API geokodiert (mit Timeout- und Ratenlimit-Schutz).
-
-Karten-Visualisierung
-Mit folium wird eine interaktive HTML-Karte erzeugt:
-
-Markergröße = Häufigkeit
-
-Farbe: Rot = ≥ 1 tödlicher Vorfall, Gelb = nur nicht-tödliche
-
-Tooltip mit Art, Aktivität, Ortsname
-
-Projektstruktur
-
-shark_attack_worldwide/
-│
-├── data/
-│   ├── GSAF5.xls
-│   ├── gsaf_cleaned.csv
-│   └── gsaf_with_coordinates.csv
-│
-├── scripts/
-│   ├── prepare_data.py
-│   ├── geocode_locations.py
-│   └── map_shark_attacks.py
-│
-├── .gitignore
+## Project Structure
+shark-attack-data-visualization/
+├── data/           # raw and processed data files
+├── scripts/        # Python scripts for processing and visualization
+├── output/         # generated HTML map
 ├── README.md
-└── shark_attack_map.html
-Hinweise
-Die Geocodierung nutzt einen privaten API-Key (OpenCage). Dieser ist nicht im Repository enthalten und sollte lokal in apikey.txt oder .env gespeichert werden.
+├── requirements.txt
+└── .gitignore
 
-Pro Durchlauf werden maximal 500 API-Anfragen verarbeitet. Wiederholtes Ausführen ergänzt schrittweise weitere Einträge.
 
-Ziel & Ausblick
-Ziel des Projekts war es, mit realen Daten ein visuelles Analysewerkzeug zu bauen. Der Fokus lag auf dem praktischen Einsatz von APIs, Datenvisualisierung und strukturiertem Datenhandling.
-Später denkbar: Clustering, Heatmaps, Zeitverläufe, Ländervergleiche.
+## ▶️ How to Run
+1. Clone the repository:
+```bash
+git clone https://github.com/Haslbauer/shark-attack-data-visualization.git
+cd shark-attack-data-visualization
 
+2. Install dependencies:
+pip install -r requirements.txt
+
+3. Run the data
+python scripts/prepare_data.py
+python scripts/geocode_locations.py
+python scripts/map_shark_attacks.py
+
+4. Open gereated uotput:
+output/shark_attack_map.html
